@@ -56,9 +56,7 @@ h2 {
     color: cornflowerblue;
     text-align: center;
 }
-ul { 
-    display: none; 
-}
+
 p {
     text-align: center;
 }
@@ -87,3 +85,16 @@ p {
   .menu-li a:hover {
     background-color: cornflowerblue;
   }
+
+#image_list{
+    display:none;
+}
+
+.hidden{
+    display: none;
+}
+
+#main-image{
+    max-width: 400px;
+    
+}
