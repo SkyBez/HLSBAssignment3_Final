@@ -1,5 +1,5 @@
 "use strict";
-
+//Setting constants to be used throughout the program.
 const $ = (selector) => document.querySelector(selector);
 
 const slides = document.querySelectorAll('.show');

@@ -89,24 +89,30 @@ const onSubmit = (evt) => {
 };
 
 
-// Time calculations for days, hours, minutes and seconds
+// Updates the timer every second when the timer is greater then or equal to zero. When the time elapses zero the temperature value returns to whatever it was set to before.
 const update = evt =>{
   distance-=1000;
+  //Converts time to hours, minutes, and seconds in a legible format.
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
   if(distance>=0){
+    //displays time.
     $("#setting_timer").textContent = hours + ": "+ minutes + ": " + seconds;
   }else{
+    //displays previously stored value after timer runs outs.
     $("#setting_temperature").textContent = storedTemp;
   }
 
 }
 
+//stores the previous temperature and then temporarily stores the new value.
 const timedtemp = evt =>{
+  //converts timer into milliseconds
   distance = ($("#hour").value*60*60*1000)+($("#mins").value*60*1000);
   storedTemp=$("#setting_temperature").textContent;
   $("#setting_temperature").textContent = $("#temp").value;
+  //Updates every second.
   timer = setInterval(update, 1000);
 }
 
@@ -118,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#reset_form").addEventListener("reset", onReset);
   //TODO:: Add Submit Form listener
   $("#update_settings").addEventListener("click", onSubmit);
+  //Event listener for the temporary temperature button.
   $("#temporary").addEventListener("click", timedtemp);
 });
 
