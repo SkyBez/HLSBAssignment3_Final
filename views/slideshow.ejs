@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Home Photo Frame</title>
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+    <%- include('Layouts/menu') -%>
+    <main>
+        <h1>Family Slide Show</h1>
+        <div class="container">
+            <div clas="slideshows">
+            <div class="show">
+             <h2>Vacation!</h2>
+                <img src="images/group.jpg"></img>
+            </div>
+            <div class="show">
+             <h2>What a Chuckster!</h2>
+             <img src="images/chuckster.jpg"></img>
+            </div>
+            <div class="show">
+                <h2>Relaxation!</h2>
+                <img src="images/Peach.jpg"></img>
+            </div>
+                <div class="show">
+                    <h2>Family pet!</h2>
+                    <img src="images/seaman.jpg"></img>
+                </div>
+                <div class="show">
+                    <h2>Oh no!</h2>
+                    <img src="images/ohno.jpg"></img>
+                </div>
+            </div>
+    
+        
+            <div class="Arrows">
+                <span id="Previous"><i class="prevselect"></i></span>
+                <span id="Next"><i class="nextselect"></i></span>
+            </div>
+        </div>
+        <script src="js/slide-show.js"></script>
+    </main>  
+    <%- include('Layouts/footer') -%>
+</body>
+</html>

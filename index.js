@@ -41,16 +41,19 @@ app.get("/math", (req, res) => {
   res.render("math");
 });
 
-app.get("/faq", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "faq.html"));
+app.get("/privacy", (req, res) => {
+  //res.sendFile(path.resolve(__dirname + "/views/", "privacy"));
+  res.render("privacy");
 });
 
 app.get("/terms", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "terms.html"));
+  //res.sendFile(path.resolve(__dirname + "/views/", "terms"));
+  res.render("terms");
 });
 
 app.get("/slides", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "slide-show.html"));
+  //res.sendFile(path.resolve(__dirname + "/views/", "slideshow"));
+  res.render("slideshow");
 });
 
 app.post("/update-profile", (req,res)=>{

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/profile.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jest Smart Home Profile</title>
+    <title>Smart Home Profile</title>
   </head>
   <body>
     <%- include('Layouts/menu') -%>
@@ -51,6 +51,7 @@
       </div>
       <div>
         <h2>Current User Settings</h2>
+        <img src="Misc/userICON.jpg" width="150" alt="UserImage" id="profilePic"/>
         <% if (user) { %>
           <div>
             <label>Name&nbsp;&nbsp;</label>
@@ -90,6 +91,7 @@
           </div>
       </div>
     </main>
+    <%- include('Layouts/footer') -%>
     <script src="js/profile.js"></script>
   </body>
 </html>

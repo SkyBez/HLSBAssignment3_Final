@@ -1,10 +1,17 @@
 "use strict";
-
+//Setting variables for later functions.
 const $ = (selector) => document.querySelector(selector);
+let timer;
+let distance;
+let storedTemp;
 
+
+//Setting the postal code regular expression.
 const postalRegEx =
   /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/i;
 
+
+//Function when the reset button is hit.
 const onReset = (evt) => {
   //TODO:: Reset the reset-able fields
   resetErrors();
@@ -18,12 +25,14 @@ const onReset = (evt) => {
   evt.preventDefault();
 };
 
+//Clears all errors
 const resetErrors = () => {
   $("#temperature_error").textContent = "";
   $("#location_error").textContent = "";
   console.error("Fields Reset");
 };
 
+//Function when the submit button is hit.
 const onSubmit = (evt) => {
   //TODO::Reset any errors before submitting
   resetErrors();
@@ -79,6 +88,29 @@ const onSubmit = (evt) => {
   evt.preventDefault();
 };
 
+
+// Time calculations for days, hours, minutes and seconds
+const update = evt =>{
+  distance-=1000;
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  if(distance>=0){
+    $("#setting_timer").textContent = hours + ": "+ minutes + ": " + seconds;
+  }else{
+    $("#setting_temperature").textContent = storedTemp;
+  }
+
+}
+
+const timedtemp = evt =>{
+  distance = ($("#hour").value*60*60*1000)+($("#mins").value*60*1000);
+  storedTemp=$("#setting_temperature").textContent;
+  $("#setting_temperature").textContent = $("#temp").value;
+  timer = setInterval(update, 1000);
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   //TODO:: Add current date
   $("#date_display").textContent = new Date().toDateString();
@@ -86,4 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#reset_form").addEventListener("reset", onReset);
   //TODO:: Add Submit Form listener
   $("#update_settings").addEventListener("click", onSubmit);
+  $("#temporary").addEventListener("click", timedtemp);
 });
+

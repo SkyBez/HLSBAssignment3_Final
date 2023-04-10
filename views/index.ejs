@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jest Smart Home</title>
+    <title>Smart Home Application</title>
   </head>
   <body>
     <%- include('Layouts/menu') -%>
-    <main>      <h1>Jest Smart Home</h1>
+    <main>      <h1>Welcome to Smart Home!</h1>
       <div>
         <h3 id="date_display"></h3>
       </div>
@@ -66,6 +66,42 @@
           /><span id="temperature_error" class="error-span"></span>
         </div>
         <div>
+          <label>Temp Temp!</label>
+          <input
+            type="number"
+           id="temp"
+            name="temptemperature"
+            min="5"
+           max="30"
+            step="0.5"
+            value="0"  
+          />
+        </div>
+        <div>
+          <label>Temp Timer</label>
+          <input
+          type="number"
+          id="hour"
+          name="tempHour"
+          min="0"
+          max="24"
+          step="1"
+          value="0"
+          />
+          <input
+          type="number"
+          id="mins"
+          name="tempMins"
+          min="0"
+          max="59"
+          step="1"
+          value="0"
+          />
+        </div>
+        <div>
+          <button type="button" name="temporary" id="temporary">Temporary Temperature</button>
+        </div>
+        <div>
           <label></label>
           <input type="submit" value="Update" id="update_settings" />
           <input type="reset" value="Reset" id="reset_form" />
@@ -89,7 +125,12 @@
         ><span class="current-setting" id="setting_temperature">21</span
         ><span>°C</span>
       </div>
+      <div>
+        <label>Temperature timer</label>
+        <span class="current-setting" id="setting_timer">00:00:00</span>
+      </div>
     </main>
     <script src="js/dashboard.js"></script>
+    <%- include('Layouts/footer') -%>
   </body>
 </html>
