@@ -27,7 +27,8 @@ app.listen(PORT, () => {
 
 app.get("/", (req, res) => {
   //res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
-  res.render("index");
+  let current = req.session.current;
+  res.render("index", {current});
 });
 
 app.get("/profile", (req, res) => {
@@ -56,11 +57,26 @@ app.get("/slides", (req, res) => {
   res.render("slideshow");
 });
 
+app.get("/calculator", (req, res) => {
+  //res.sendFile(path.resolve(__dirname + "/views/", "slideshow"));
+  res.render("calculator");
+});
+
+
+
 app.post("/update-profile", (req,res)=>{
   console.log(req.body);
 
   req.session.user = req.body;
 
   res.redirect("/profile");
+})
+
+app.post("/update-dashboard", (req,res)=>{
+  console.log(req.body);
+
+  req.session.current = req.body;
+
+  res.redirect("/");
 })
 
