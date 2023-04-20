@@ -4,14 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Smart Home Photo Frame</title>
-    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/slides.css">
 </head>
 <body>
     <%- include('Layouts/menu') -%>
+    <a class="prev" onclick="plusSlides(-1)"><</a>
+    <a class="next" onclick="plusSlides(1)">></a>
+
     <main>
+
+        <h1>Who's in the smart house?</h1>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img id=slide_image src="images/1.png">
+                <div class="text">DAD</div>
+            </div>
+
+
+            <div class="mySlides fade">
+                <img id=slide_image src="images/2.png">
+                <div class="text">MOM</div>
+
+            </div>
+
+
+            <div class="mySlides fade">
+                <img id=slide_image src="images/3.png">
+                <div class="text">BABY</div>
+            </div>
+
+
+
+
+            <div class="mySlides fade">
+                <img id=slide_image src="images/4.png">
+                <div class="text">PUPPY</div>
+
+            </div>
+
+
+
+
+            <div class="mySlides fade">
+                <img id=slide_image src="images/5.png">
+                <div class="text">KITTY</div>
+
+            </div>
+
+
+
+        </div>
+    <!-- <main>
         <h1>Family Slide Show</h1>
+
+
         <div class="container">
-            <div clas="slideshows">
+            <div class="slideshows" >
+
             <div class="show">
              <h2>Vacation!</h2>
                 <img src="images/group.jpg"></img>
@@ -24,24 +74,31 @@
                 <h2>Relaxation!</h2>
                 <img src="images/Peach.jpg"></img>
             </div>
-                <div class="show">
+            <div class="show">
                     <h2>Family pet!</h2>
                     <img src="images/seaman.jpg"></img>
-                </div>
-                <div class="show">
+            </div>
+            <div class="show">
                     <h2>Oh no!</h2>
                     <img src="images/ohno.jpg"></img>
-                </div>
             </div>
-    
-        
+            </div>
+
             <div class="Arrows">
-                <span id="Previous"><i class="prevselect"></i></span>
-                <span id="Next"><i class="nextselect"></i></span>
-            </div>
-        </div>
+                <span id="Previous">
+                     <i class="prevselect"></i> -->
+                <!-- </span>
+                <span id="Next">
+                   <i class="nextselect"></i> -->
+                <!-- </span>
+                </div>
+            </div>   -->
+ 
+
+
         <script src="js/slide-show.js"></script>
-    </main>  
-    <%- include('Layouts/footer') -%>
+    </main> 
+
+<%- include('Layouts/footer') -%>
 </body>
 </html>

@@ -1,0 +1,273 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+}
+
+h1 {
+    /* width: 500px; */
+    font-family: "Times New Roman", sans-serif;
+    /* border: 2px solid rgb(255, 0, 0); */
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-style: oblique;
+    padding-top: 10px;
+    padding-bottom: 0px;  
+}
+
+h3 {
+    /* width: 500px; */
+    font-family: "Times New Roman", sans-serif;
+    /* border: 2px solid rgb(0, 153, 64); */
+    text-align: center;
+    color: rgb(211, 211, 211);
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+h4 {
+    /* width: 500 px; */
+    font-family: "Times New Roman", sans-serif;
+    /* border: 2px solid rgb(255, 0, 0); */
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-style: oblique;
+}
+
+#currentSetting{
+    font-family: "Times New Roman", sans-serif;
+    /* margin-left: 50%;
+    margin-right: 50%; */
+    margin-bottom: 0px;
+    /* border: 2px solid rgb(255, 0, 0); */
+    /* width: 500px; */
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+.user-setting{
+    /* margin-left: 370px;
+    margin-right: 370px; */
+    /* width: 300px; */
+    font-family: "Times New Roman", sans-serif;
+    text-align: left;
+    padding: 20px;
+    padding-left: 44%;
+    color: rgb(255, 255, 255);
+    /* border: 2px solid rgb(47, 0, 255); */
+    font-size: 100%;
+}
+
+.user-setting-profile{
+    /* margin-left: 370px;
+    margin-right: 370px; */
+    /* width: 300px; */
+    font-family: "Times New Roman", sans-serif;
+    text-align: left;
+    padding: 20px;
+    padding-left: 40%;
+    color: rgb(255, 255, 255);
+    /* border: 2px solid rgb(47, 0, 255); */
+    font-size: 100%;
+}
+
+.user-setting-now{
+    /* margin-left: 370px;
+    margin-right: 370px; */
+    /* width: 300px; */
+    font-family: "Times New Roman", sans-serif;
+    text-align: center;
+    padding: 30px;
+    color: rgb(255, 255, 255);
+    /* border: 2px solid rgb(255, 183, 183); */
+    /* font-style: oblique; */
+    font-weight: bold;
+    font-size: 100%;
+}
+
+
+#profilePic{
+    margin-left: 45%;
+    margin-top: 20px;
+    /* border: 2px solid rgb(255, 0, 0); */
+  }
+
+.menu-ul {
+    list-style-type: none;
+    font-weight: bold;
+    font-style: oblique;
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(168, 0, 0);
+  }
+  
+.menu-li {
+    float: left;
+  }
+  
+.menu-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.menu-li a:hover {
+    background-color: #dbb5b0;
+  }
+
+
+.footer-ul {
+    /* position: fixed; */
+    bottom: 0;
+    font-weight: bold;
+    font-style: oblique;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dbb5b0;
+  }
+.footer-li {
+    float: left;
+  }
+  
+.footer-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+.footer-li a:hover {
+    background-color: rgb(168, 0, 0);
+  }
+
+p{
+  color: aliceblue;
+}
+
+legend{
+  color: rgb(255, 0, 0);
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+#slide_image{
+  max-width: 350px;
+
+}
+
+#Previous, #Next{
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.Arrows{
+  position: absolute;
+  z-index: 2;
+  width: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Arrows span{
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  background: rgba(179, 210, 218, 0.867);
+  border-radius: 50%;
+
+}
+
+
+@media only screen and (max-width: 768px){
+    h1{
+        margin: 0px;
+    }
+
+    legend{
+      margin-top: 20px;
+    }
+
+    .text{
+        margin: 0px
+    }
+
+    .user-setting{
+        padding-left: 20%;
+    }
+    
+    .user-setting-profile{
+        padding-left: 20%;
+    }
+
+    .user-setting-now{
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    #profilePic{
+        margin-left:30%;
+    }
+    .menu
+    {
+        margin :0px;
+    }
+    .menu-ul{
+      margin-bottom: 30px;
+    }
+    .menu-li
+    {
+        width:100%
+    }
+
+    .menu-li a {
+        padding: 15px 0px;
+    }
+
+    .footer
+    {
+        margin :0px;
+    }
+
+    .footer-ul{
+      margin-top: 30px;
+    }
+    
+    .footer-li
+    {
+        width:100%
+    }
+
+    .footer-li a {
+        
+        padding: 15px 0px;
+  
+    }
+
+    ul{
+        padding-inline-start: 0px !important;
+
+    }
+    
+}

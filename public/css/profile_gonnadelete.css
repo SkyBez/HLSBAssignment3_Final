@@ -10,6 +10,7 @@ html {
   
   
   body {
+      border: 2px solid rgb(255, 0, 0);
       font-family: monospace;
       font-size: larger;
       background: #d4e4ec;
@@ -21,9 +22,10 @@ html {
     height: 80vh;
     text-indent: 6.5in;
     background-color: #91a9b6;
-    border: #73909e;
+    /* border: #73909e; */
     border-width: 20px;
     border-style: double;
+    border: 2px solid rgb(255, 0, 0);
   }
 
   ul{
@@ -37,23 +39,27 @@ html {
     color: white;
     text-decoration: none;
     font-size: x-large;
+    border: 2px solid rgb(255, 0, 0);
   }
   link{
     padding-top: 20%;
     padding-bottom: 20%;
     margin-bottom: 20px;
+    border: 2px solid rgb(255, 0, 0);
   }
 
   a{   
     color: white;
     text-decoration: none;
+    border: 2px solid rgb(255, 0, 0);
   }
 
 #profilePic{
-  border: #141414;
+  /* border: #141414; */
   border-style: solid;
   border-width: 10px;
   margin-left: 7in;
+  border: 2px solid rgb(255, 0, 0);
 }
 
 .menu-ul {
