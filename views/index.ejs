@@ -78,7 +78,7 @@
               min="5"
              max="30"
               step="0.5"
-              value="0"  
+              value="5"  
             />
           </div>
           <div>
@@ -116,24 +116,43 @@
       <!-- <br> -->
       <h2 id="currentSetting">Current Settings</h2>
       <div class="user-setting-now">
-        <div>
-          <label>Notifications:&nbsp;</label>
-          <span class="current-setting" id="setting_notifications">On</span>
-        </div>
-        <div>
-          <label>Lighting Mode:&nbsp;</label>
-          <span class="current-setting" id="setting_lighting_mode">Eco</span>
-        </div>
-        <div>
-          <label>Location:&nbsp;</label
-          ><span class="current-setting" id="setting_location">L7W 4T8</span>
-        </div>
-        <div>
-          <label>Temperature:&nbsp;</label
-          ><span class="current-setting" id="setting_temperature">21</span
-          ><span>°C</span>
-        </div>
-        <div>
+        <% if (current) {%>
+          <div>
+            <label>Notifications:&nbsp;</label>
+            <span class="current-setting" id="setting_notifications"><%=current.notifs%></span>
+          </div>
+          <div>
+            <label>Lighting Mode:&nbsp;</label>
+            <span class="current-setting" id="setting_lighting_mode"><%=current.lighting_mode%></span>
+          </div>
+          <div>
+            <label>Location:&nbsp;</label
+            ><span class="current-setting" id="setting_location"><%=current.postals%></span>
+          </div>
+          <div>
+            <label>Temperature:&nbsp;</label
+            ><span class="current-setting" id="setting_temperature"><%=current.temperature%></span
+            ><span>°C</span>
+          </div>
+          <%} else {%>
+            <div>
+              <label>Notifications:&nbsp;</label>
+              <span class="current-setting" id="setting_notifications">On</span>
+            </div>
+            <div>
+              <label>Lighting Mode:&nbsp;</label>
+              <span class="current-setting" id="setting_lighting_mode">Eco</span>
+            </div>
+            <div>
+              <label>Location:&nbsp;</label
+              ><span class="current-setting" id="setting_location">L7W 4T8</span>
+            </div>
+            <div>
+              <label>Temperature:&nbsp;</label
+              ><span class="current-setting" id="setting_temperature">21</span
+              ><span>°C</span>
+            </div>
+          <% } %>
           <label>Temperature timer:</label>
           <span class="current-setting" id="setting_timer">00:00:00</span>
         </div>

@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/design.css" />
+    <link rel="stylesheet" href="css/calculator.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Smart Home Application</title>
   </head>
   <body>
     <%- include('Layouts/menu') -%>
+    <div>
+      <h1>Calculator</h1>
+      <div>
+        <input class="display" type="text" disabled="disabled">
+        <table>
+          <tr>
+            <td><button class="buttons">AC</button></td>
+            <td><button class="buttons">DEL</button></td>
+          </tr>
+          <tr>
+            <td><button class="buttons">7</button></td>
+            <td><button class="buttons">8</button></td>
+            <td><button class="buttons">9</button></td>
+            <td><button class="buttons">+</button></td>
+          </tr>
+          <tr>
+            <td><button class="buttons">4</button></td>
+            <td><button class="buttons">5</button></td>
+            <td><button class="buttons">6</button></td>
+            <td><button class="buttons">-</button></td>
+          </tr>
+          <tr>
+            <td><button class="buttons">1</button></td>
+            <td><button class="buttons">2</button></td>
+            <td><button class="buttons">3</button></td>
+            <td><button class="buttons">x</button></td>
+          </tr>
+          <tr>
+            <td><button class="buttons">0</button></td>
+            <td><button class="buttons">.</button></td>
+            <td><button class="buttons">=</button></td>
+            <td><button class="buttons">/</button></td>
+          </tr>
+        </table>
+      </div>
+
+
+    </div>
     <%- include('Layouts/footer') -%>
+    <script src="js/calculator.js"></script>
   </body>
+</html>
