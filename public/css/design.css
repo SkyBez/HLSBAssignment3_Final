@@ -126,17 +126,17 @@ h4 {
 
 
 .footer-ul {
-    /* position: fixed; */
     bottom: 0;
     font-weight: bold;
     font-style: oblique;
     list-style-type: none;
     margin: 0;
-    margin-top: 80px;
+    margin-top: 270px;
     padding: 0;
     overflow: hidden;
     background-color: #dbb5b0;
   }
+
 .footer-li {
     float: left;
   }
@@ -183,21 +183,8 @@ legend{
   user-select: none;
 }
 
-.Arrows{
-  position: absolute;
-  z-index: 2;
-  width: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.Arrows span{
-  padding: 1rem 1.2rem;
-  font-size: 1.5rem;
-  background: rgba(179, 210, 218, 0.867);
-  border-radius: 50%;
 
-}
+.hidden { display: none; }
 
 
 @media only screen and (max-width: 768px){
@@ -269,5 +256,6 @@ legend{
         padding-inline-start: 0px !important;
 
     }
+ 
     
 }
